@@ -1,0 +1,12 @@
+cloudfront.net
+googlecode.com
+verisign.com
+qpic.cn
+translate-tab.com
+layervault.com
+list-manage.com
+goagent.co
+eruda.liriliri.io
+google.com.hk
+heroku.com
+herokucdn.com

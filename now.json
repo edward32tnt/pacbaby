@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "public": true,
+  "regions": ["sfo"],
+  "builds": [
+    { "src": "**/*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/pac", "dest": "/controller/now/index.js" }
+  ]
+}
