@@ -3,8 +3,7 @@ const syncGfwList = require('../../lib/syncGfwList')
 
 let cacheScript = 'Downloading...'
 
-
-syncGfwList().then(dm => cacheScript = dm)
+syncGfwList().then(res => cacheScript = res)
 
 exports.index = async ctx => {
   ctx.body = cacheScript
@@ -12,6 +11,6 @@ exports.index = async ctx => {
 
 exports.update = async ctx => {
   cacheScript = 'Downloading'
-  syncGfwList()
+  await syncGfwList().then(res => cacheScript = res)
   ctx.body = 'ok'
 }
