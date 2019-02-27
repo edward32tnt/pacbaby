@@ -9,6 +9,10 @@ exports.index = async ctx => {
   ctx.body = cacheScript
 }
 
+exports.custom = async ctx => {
+  ctx.body = await syncGfwList({ customProxy:ctx.query.proxy })
+}
+
 exports.update = async ctx => {
   cacheScript = 'Downloading'
   await syncGfwList().then(res => cacheScript = res)
